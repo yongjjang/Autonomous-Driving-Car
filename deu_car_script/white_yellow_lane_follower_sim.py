@@ -24,17 +24,20 @@ class Follower:
   	
   def image_callback(self, msg):
     global perr, ptime, serr, dt
-    image0 = self.bridge.imgmsg_to_cv2(msg,desired_encoding='bgr8')
+    image = self.bridge.imgmsg_to_cv2(msg)
    
+	#h, w, d = image0.shape	
+
     #transformation
-    img = cv2.resize(image0,None,fx=0.6, fy=0.6, interpolation = cv2.INTER_CUBIC)
+    #img = cv2.resize(image0,None,fx=0.6, fy=0.6, interpolation = cv2.INTER_CUBIC)
     #print img.shape
-    rows, cols, ch = img.shape
-    pts1 = numpy.float32([[90,122],[313,122],[35,242],[385,242]])
-    pts2 = numpy.float32([[0,0],[400,0],[0,400],[400,400]])
-    M = cv2.getPerspectiveTransform(pts1,pts2)
-    img_size = (img.shape[1], img.shape[0])
-    image = cv2.warpPerspective(img,M,(img_size[0]+100,img_size[1]+100))#img_size
+    #rows, cols, ch = img.shape
+    #pts1 = numpy.float32([[90,122],[313,122],[35,242],[385,242]])
+    #pts2 = numpy.float32([[0,0],[400,0],[0,400],[400,400]])
+    #M = cv2.getPerspectiveTransform(pts1,pts2)
+    #img_size = (img.shape[1], img.shape[0])
+    
+    #image = cv2.warpPerspective(img,M,( h +100, w +100))#img_size
     
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     lower_yellow = numpy.array([ 40,  90, 80])
