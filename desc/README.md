@@ -5,7 +5,7 @@
 ## Usage
 ```Shell
 $ sudo mv /opt/ros/kinetic/share/kobuki_description/urdf/kobuki_gazebo.urdf.xacro /opt/ros/kinetic/share/kobuki_description/urdf/origin.kobuki_gazebo.urdf.xacro
-$ sudo mv /opt/ros/kinetic/share/kobuki_description/urdf/kobuki.urdf.xacro sudo mv /opt/ros/kinetic/share/kobuki_description/urdf/origin.kobuki.urdf.xacro
+$ sudo mv /opt/ros/kinetic/share/kobuki_description/urdf/kobuki.urdf.xacro /opt/ros/kinetic/share/kobuki_description/urdf/origin.kobuki.urdf.xacro
 
 $ sudo mv kobuki_gazebo.urdf.xacro /opt/ros/kinetic/share/kobuki_description/urdf/
 $ sudo mv kobuki.urdf.xacro /opt/ros/kinetic/share/kobuki_description/urdf/
