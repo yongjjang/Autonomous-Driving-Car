@@ -14,6 +14,6 @@ $ sudo mv kobuki.urdf.xacro /opt/ros/kinetic/share/kobuki_description/urdf/
 
 ## Advertise Topic name
 - Right Camera :
-  - /my_camera_right/rgb/image_raw
+  - /my_right_camera/rgb/image_raw
 - Left Camera :
-  - /my_camera_left/rgb/image_raw
+  - /my_left_camera/rgb/image_raw
