@@ -227,7 +227,7 @@
     <xacro:property name="cameraSize" value="0.04"/>
     <xacro:property name="cameraMass" value="0.1"/>
 
-      <link name="my_right_camera">
+      <link name="my_left_camera">
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -253,12 +253,12 @@
 
   <joint name="custom_camera_joint_right" type="fixed">
     <axis xyz="0 1 0" />
-    <origin xyz=".12 .11 .153" rpy="0 0 0"/>
+    <origin xyz=".12 .11 .153" rpy="0 0 0.6"/>
     <parent link="base_link"/>
-    <child link="my_right_camera"/>
+    <child link="my_left_camera"/>
   </joint>
   <!-- my_camera left-->
-       <link name="my_left_camera">
+       <link name="my_right_camera">
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -284,9 +284,9 @@
 
   <joint name="custom_camera_joint_left" type="fixed">
     <axis xyz="0 1 0" />
-    <origin xyz=".12 -.11 .153" rpy="0 0 0"/>
+    <origin xyz=".12 -.11 .153" rpy="0 0 -0.6"/>
     <parent link="base_link"/>
-    <child link="my_left_camera"/>
+    <child link="my_right_camera"/>
   </joint>
     <!-- Kobuki Gazebo simulation details -->
     <kobuki_sim/>
