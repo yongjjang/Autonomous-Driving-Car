@@ -17,3 +17,15 @@ $ sudo mv kobuki.urdf.xacro /opt/ros/kinetic/share/kobuki_description/urdf/
   - /my_right_camera/rgb/image_raw
 - Left Camera :
   - /my_left_camera/rgb/image_raw
+
+## alias roslaunch deu_car car_test_map.launch
+```Shell
+$ gedit .bashrc
+
+// ADD this line
+alias ros_car='roscd deu_car && source gazebo_env.sh && roslaunch deu_car car_test_map.launch'
+
+$ source .bashrc
+$ ros_car
+
+```
