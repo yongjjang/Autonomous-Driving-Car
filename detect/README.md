@@ -1,4 +1,4 @@
-cv2.threshold(img, threshold_value, value, flag)
+# cv2.threshold(img, threshold_value, value, flag)
 
 thr = cv2.threshold(mask, 127, 255, 0)
 
@@ -15,7 +15,8 @@ thr = cv2.threshold(mask, 127, 255, 0)
     * cv2.THRESH_TOZERO_INV = 4 : 픽셀 값이 threshold_value 보다 크면 0, 작으면 픽셀 값
 
 
-cv2.findContours(image, mode, method)
+
+# cv2.findContours(image, mode, method)
 
 contours = cv2.findContours(thr, cv2.RETR_TREE, cv2.CHAINAPPROX_SIMPLE)
 
