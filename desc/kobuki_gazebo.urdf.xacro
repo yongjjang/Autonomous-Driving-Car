@@ -188,7 +188,7 @@
     </gazebo>
 
     <gazebo reference="my_left_camera">
-      <material>Gazebo/Green</material>
+      <material>Gazebo/Black</material>
       <sensor type="camera" name="my_left_camera">
 	<update_rate>20.0</update_rate>
 	<camera name="head">
@@ -206,7 +206,7 @@
 	<plugin name="camera_controller" filename="libgazebo_ros_camera.so">
           <alwaysOn>true</alwaysOn>
           <updateRate>0.0</updateRate>
-          <cameraName>/my_right_camera/rgb</cameraName>
+          <cameraName>/my_left_camera/rgb</cameraName>
           <imageTopicName>image_raw</imageTopicName>
           <cameraInfoTopicName>camera_info</cameraInfoTopicName>
           <frameName>camera</frameName>
@@ -221,7 +221,7 @@
     </gazebo>
 
     <gazebo reference="my_right_camera">
-      <material>Gazebo/Green</material>
+      <material>Gazebo/Black</material>
       <sensor type="camera" name="my_right_camera">
 	<update_rate>20.0</update_rate>
 	<camera name="head">
