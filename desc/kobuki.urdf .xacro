@@ -231,14 +231,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size="${cameraSize} ${cameraSize} ${cameraSize}"/>
+        <sphere radius= "0.02"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <sphere radius= "0.03"/><!--"${cameraSize} ${cameraSize} ${cameraSize}"/>-->
+        <sphere radius= "0.02"/><!--"${cameraSize} ${cameraSize} ${cameraSize}"/>-->
       </geometry>
       <material name="green"/>
     </visual>
@@ -262,14 +262,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size="${cameraSize} ${cameraSize} ${cameraSize}"/>
+        <sphere radius= "0.02"/>
       </geometry>
     </collision>
 
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <sphere radius= "0.03"/>
+        <sphere radius= "0.02"/>
       </geometry>
       <material name="green"/>
     </visual>
