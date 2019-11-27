@@ -20,6 +20,7 @@ $ sudo mv kobuki.urdf.xacro /opt/ros/kinetic/share/kobuki_description/urdf/
 
 ## alias roslaunch deu_car car_test_map.launch
 ```Shell
+$ cd
 $ gedit .bashrc
 
 // ADD this line
