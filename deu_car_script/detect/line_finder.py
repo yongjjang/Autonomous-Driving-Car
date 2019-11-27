@@ -6,7 +6,7 @@ import cv2
 import cv_bridge
 from sensor_msgs.msg import Image
 from std_msgs.msg import Bool
-from robot_control import RobotBaseMove
+from deu_car_script.lane_trace.robot_drive_controller import RobotDriveController
 
 
 class BlockDetector:
@@ -14,7 +14,7 @@ class BlockDetector:
         self.bridge = cv_bridge.CvBridge()
         self.image_sub = rospy.Subscriber('camera/rgb/image_raw', Image, self.img_cb)
         self.block_pub = rospy.Publisher('detect/block', Bool, queue_size=1)
-        self.robot_controller = RobotBaseMove()
+        self.drive_controller = RobotDriveController()
 
     def img_cb(self, msg):
         origin_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
@@ -33,12 +33,11 @@ class BlockDetector:
         # print (len(contours))
         if len(contours) == 0:
             self.block_pub.publish(True)
-            self.robot_controller.go_forward()
-            self.robot_controller.set_velocity(1)
+            self.drive_controller.drive_forward()
+            self.drive_controller.set_velocity(1)
         else:
             self.block_pub.publish(False)
-            self.robot_controller.set_velocity(0)
-        # self.robot_controller.go_forward()
+            self.drive_controller.set_velocity(0)
 
 
 if __name__ == '__main__':
