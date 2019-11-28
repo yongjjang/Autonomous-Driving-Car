@@ -7,7 +7,6 @@ from geometry_msgs.msg import Twist
 class RobotDriveController:
 
     def __init__(self):
-        rospy.init_node('robot_drive_controller')
         self.cmd_vel_pub = rospy.Publisher('cmd_vel_mux/input/teleop', Twist, queue_size=1)
         self.twist = Twist()
         self.rate = rospy.Rate(10)
@@ -30,7 +29,7 @@ class RobotDriveController:
 
 
 if __name__ == "__main__":
-    robotDrivenController = RobotDrivenController()
+    robotDrivenController = RobotDriveController()
     robotDrivenController.drive_forward(1)
 
     while not rospy.is_shutdown():
