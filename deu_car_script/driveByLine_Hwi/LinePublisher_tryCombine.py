@@ -103,6 +103,12 @@ class DriveLinePublisher:
 
     self.driveLineInfo_pub.publish(self.driveLineInfo)
 
+    rightValue = self.driveLineInfo.rightLineInfo
+    leftValue = self.driveLineInfo.leftLineInfo
+
+    rospy.loginfo( rightValue )
+    rospy.loginfo(leftValue)
+
     cv2.imshow("Robot View", image)
     cv2.imshow("Left Line View", leftLine)
     cv2.imshow("Right Line View", rightLine)
@@ -132,7 +138,7 @@ class DriveLinePublisher:
       # BEGIN CONTROL
       # 왼쪽 차선의 기준선이 화면의 1/2 지점에 위치한다고 했을 때 그와의 오차
       err = cx - w / 4 * 3
-      self.driveLineInfo.rightLine = err
+      self.driveLineInfo.rightLineInfo = err
       # self.rightLineInfo_pub.publish(self.rightLineInfo)
       ''''#self.twist.linear.x = 0.2
       self.twist.angular.z = -float(err) / 100
@@ -166,7 +172,7 @@ class DriveLinePublisher:
 
       # 왼쪽 차선의 기준선이 화면의 1/2지점에 위치한다고 했을 때 그와의 오차
       err = cx - w / 4
-      self.driveLineInfo.leftLine = err
+      self.driveLineInfo.leftLineInfo = err
       # self.leftLineInfo_pub.publish(self.leftLineInfo)
       ''''#self.twist.linear.x = 0.2
       self.twist.angular.z = -float(err) / 100
@@ -192,7 +198,7 @@ class DriveLinePublisher:
       # BEGIN CONTROL
       # 왼쪽 차선의 기준선이 화면의 1/2 지점에 위치한다고 했을 때 그와의 오차
       err = cx - w / 4 * 3
-      self.driveLineInfo.rightLine = err
+      self.driveLineInfo.rightLineInfo = err
 
   def LeftmomentumPublisher(self, maskedImg, image):
     h, w, d = image.shape
@@ -212,7 +218,7 @@ class DriveLinePublisher:
       # BEGIN CONTROL
       # 왼쪽 차선의 기준선이 화면의 1/2 지점에 위치한다고 했을 때 그와의 오차
       err = cx - w / 4 * 3
-      self.driveLineInfo.leftLine = err
+      self.driveLineInfo.leftLineInfo = err
 
 '''        #차선만 인식 -> 노이즈 값 줄임
         if whiteMask[i, j] != whiteMask[i, j + 1]:  # 선과 선사이 감지

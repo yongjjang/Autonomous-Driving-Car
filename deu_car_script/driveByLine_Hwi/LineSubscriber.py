@@ -26,7 +26,7 @@ class LineSubscriber:
         self.twist = Twist()
 
     def set_movement(self,msg):
-        err = msg.leftLine + msg.rightLine
+        err = (msg.leftLineInfo + msg.rightLineInfo)
 
         rospy.loginfo(err)
 

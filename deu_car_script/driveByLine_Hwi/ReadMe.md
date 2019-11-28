@@ -2,4 +2,4 @@
 
 msg에 DriveLineInfo 필요.
 
-OpenCV화면 느림 ㅠ
+CMakefile에 DriveLineInfo 추가해야함
