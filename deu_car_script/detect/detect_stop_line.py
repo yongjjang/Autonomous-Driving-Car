@@ -35,8 +35,9 @@ class Detect_stop_line:
             return  #not found
 
         cnt = contours[0]
+
         area = cv2.contourArea(cnt)
-        if 11000.0 < area:
+        if 11000.0 < area and len(contours) == 1:
             self.stop_count += 1
             msg = "stop"
             self.stop_pub.publish(msg)
@@ -52,7 +53,7 @@ class Detect_stop_line:
         '''
         #cv2.imshow("window", image)
         #cv2.imshow("window", hsv)
-        #cv2.imshow("window", mask)
+        cv2.imshow("window", mask)
         cv2.waitKey(3)
         self.count_pub.publish(self.stop_count)
 
