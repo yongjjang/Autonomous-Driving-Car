@@ -18,29 +18,28 @@ class DetectObstacle:
         self.drive_controller = RobotDriveController()
 
     def scan_callback(self, msg):
-        angle_30 = len(msg.ranges) / 12
+        angle_180 = len(msg.ranges) / 2
+        angle_90 = len(msg.ranges) / 4
         angle_45 = len(msg.ranges) / 8
 
         # msg.ranges / 2 = range_ahead
-        self.range_ahead = msg.ranges[angle_45 * 4]
-        # right = 210 ~ 255의 최댓값
-        self.range_right = max(msg.ranges[(angle_45 * 4) + angle_30: (angle_45 * 5) + angle_30])
+        self.range_ahead = msg.ranges[len(msg.ranges) / 2]
+        self.range_right = max(msg.ranges[angle_180 - angle_90: angle_180 - angle_45])
 
         # 정면 물체, 측면 물체까지의 거리 출력
-        print "range ahead : %0.2f" % self.range_ahead
-        print "range right : %0.2f" % self.range_right
+        # print "range ahead : %0.2f" % self.range_ahead
+        # print "range right : %0.2f" % self.range_right
 
-        #  something_else = True if (math.isnan(self.range_ahead) and math.isnan(self.range_right)) or self.range_right > 1.0 else False
-
-        if (math.isnan(self.range_ahead) and math.isnan(self.range_right)) or (self.range_right > 2.5 and self.range_ahead > 2.4):
+        if self.range_ahead > 2 or self.range_right > 2 or \
+                ((math.isnan(self.range_ahead)) and math.isnan(self.range_right)):
             value = False
             self.stop_pub.publish(value)
-            self.drive_controller.drive_forward(1)
+        #    self.drive_controller.drive_forward(1)
             print('go')
         else:
             value = True
             self.stop_pub.publish(value)
-            self.drive_controller.set_velocity(0)
+        #    self.drive_controller.set_velocity(0)
             print('stop')
 
 
