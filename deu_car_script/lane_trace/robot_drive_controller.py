@@ -19,18 +19,21 @@ class RobotDriveController:
     def set_angular(self, angular):
         self.angular = angular
 
-    def drive_forward(self, velocity):
-        self.twist.linear.x = velocity
+    def drive(self):
+        self.twist.linear.x = self.velocity
+        self.twist.angular.z = self.angular
         self.cmd_vel_pub.publish(self.twist)
-
-    def turn_angular(self, degree):
-        self.twist.angular.z = degree
-        self.cmd_vel_pub.publish(self.twist)
+    #
+    # def turn_angular(self):
+    #     self.twist.angular.z = self.angular
+    #     self.cmd_vel_pub.publish(self.twist)
 
 
 if __name__ == "__main__":
+    rospy.init_node('robot_drive_controller')
     robotDrivenController = RobotDriveController()
-    robotDrivenController.drive_forward(1)
+    robotDrivenController.set_velocity(1)
+    robotDrivenController.drive_forward()
 
     while not rospy.is_shutdown():
         robotDrivenController.cmd_vel_pub.publish(robotDrivenController.twist)

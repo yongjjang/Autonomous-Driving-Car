@@ -37,7 +37,7 @@ class LineTracer:
 
 
 if __name__ == '__main__':
-    rospy.init_node('lane_follower')
+    rospy.init_node('test')
     left_line = LineTracer('my_left_camera/rgb/image_raw')
     right_line = LineTracer('my_right_camera/rgb/image_raw')
     drive_controller = RobotDriveController()
