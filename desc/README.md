@@ -1,6 +1,5 @@
 # Turtlebot Camera Description File
-
-## Finally, Turtlebot get Two Eyes..!
+Finally, Turtlebot get Two Eyes..!
 
 
 ## Advertise Topic name
