@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="ground">
+    <static>1</static>
+    <link name="ground">
+      <collision name="ground_coll">
+	<geometry>
+	  <box>
+	    <size>28.36 32.64 .01</size>
+	  </box>
+	</geometry>
+	<surface>
+	  <contact>
+	    <ode/>
+	  </contact>
+	</surface>
+      </collision>
+      <visual name="ground_vis">
+	<geometry>
+	  <box>
+	    <size>28.36 32.64 .01</size>
+	  </box>
+	</geometry>
+	<material>
+	  <script>
+	    <!-- <uri>file://materials/car_test_map.material</uri> -->
+	    <uri>model://ground/materials/car_test_map.material</uri>
+	    <name>car_test_map</name>
+	  </script>
+	</material>
+      </visual>
+    </link>
+  </model>
+</sdf>
+

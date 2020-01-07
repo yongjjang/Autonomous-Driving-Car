@@ -8,7 +8,7 @@
   
   <!-- Gazebo model spawner -->
   <node name="spawn_turtlebot_model" pkg="gazebo_ros" type="spawn_model"
-        args="-x -6.17 -y 10.78 -z 0.25 -Y -1.59 -unpause -urdf -param robot_description -model mobile_base"/>
+        args="-x -6.17 -y 10.78 -z 0.3 -Y -1.57 -unpause -urdf -param robot_description -model mobile_base"/>
   <!-- downer course ***  -x -7.17 -y 10.78 -z 0.25 -Y -1.59   *** -->
   
   <!-- Velocity muxer -->
@@ -22,3 +22,4 @@
   <!-- Bumper/cliff to pointcloud (not working, as it needs sensors/core messages) -->
   <include file="$(find turtlebot_bringup)/launch/includes/kobuki/bumper2pc.launch.xml"/>
 </launch>
+
