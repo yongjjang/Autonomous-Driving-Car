@@ -15,15 +15,11 @@ Object-Oriented Design Project
 - 사물 인식시 해당 사물에 대응하는 상태로 전이 후 동작 수행 (SMACH 사용)
 
 ## 시연 영상
-### 전체 시연 영상
-[![전체 시연](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/QRL4JoEBwTc)
-
-### 기능별 시연 영상
-#### 차단바 인식
+### 차단바 인식
 [![차단바 인식](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/ISJEHpfYz_E)
 
-#### 주행 기능
+### 주행 기능
 [![주행 기능](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/cXGEKiqsE1o)
 
-#### ROI 설정 후 영상 On Rviz
+### ROI 설정 후 영상 On Rviz
 [![ROI 설정 후 영상 On Rviz](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/X6s7BTfWpKc)
