@@ -14,7 +14,23 @@ Object-Oriented Design Project
 - 양 쪽 차선 인식을 통한 주행
 - 사물 인식시 해당 사물에 대응하는 상태로 전이 후 동작 수행 (SMACH 사용)
 
+## 비기능 사항
+- 유지 보수와 오류 제어를 위하여 로봇 제어, 센서 데이터 처리, 로봇 상태 변환의 책임을 맡는 세 개의 클래스로 책임을 나누어 구현하였음.
+- 테스트 범위를 좁히기 위하여 기능별 스크립트 실행 시 해당 기능만 수행되도록 구현하고, State Machine으로 전체 시스템이 구동되는 것을 테스트하였음. 
+
+## UML
+### Usecase
+![Usecase](image/system_uml.png)
+
+### Communication Diagram
+![Communication Diagram](image/communication_diagram.png)
+
+### State Machine Diagram
+![State Machine Diagram](image/state_machine.png)
+
+
 ## 시연 영상
+
 ### 차단바 인식
 [![차단바 인식](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/ISJEHpfYz_E)
 
@@ -23,3 +39,7 @@ Object-Oriented Design Project
 
 ### ROI 설정 후 영상 On Rviz
 [![ROI 설정 후 영상 On Rviz](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/X6s7BTfWpKc)
+
+### 정지 표지판 인식 (SURF)
+![SURF](image/stop_sign.png)
+
