@@ -34,6 +34,7 @@ Object-Oriented Design Project
 
 
 ## 시연 영상
+[![image/demo_video.png](image/demo_video.png)](https://www.youtube.com/watch?v=Fh5R5wtFb_4)
 
 
 ### 정지 표지판 인식 (SURF)
