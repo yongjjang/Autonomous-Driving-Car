@@ -35,14 +35,6 @@ Object-Oriented Design Project
 
 ## 시연 영상
 
-### 차단바 인식
-[![차단바 인식](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/ISJEHpfYz_E)
-
-### 주행 기능
-[![주행 기능](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/cXGEKiqsE1o)
-
-### ROI 설정 후 영상 On Rviz
-[![ROI 설정 후 영상 On Rviz](http://img.youtube.com/vi/uLR1RNqJ1Mw/0.jpg)](https://youtu.be/X6s7BTfWpKc)
 
 ### 정지 표지판 인식 (SURF)
 ![SURF](image/stop_sign.png)
