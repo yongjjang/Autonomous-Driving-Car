@@ -1,5 +1,5 @@
 # Autonomous-Driving-Car
-Object-Oriented Design Project
+Camera Vision 처리, 센서 데이터 처리를 활용한 시뮬레이션 내 자율 주행 로봇 구현
 
 ## 개요
 - 주어진 시뮬레이션 환경에서 자율 주행 가능한 로봇을 구현
